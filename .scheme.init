@@ -1,0 +1,2 @@
+(cd "/home/crosscap/code/mycode/scheme/")
+(load .)
