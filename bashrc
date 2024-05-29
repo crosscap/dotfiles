@@ -90,7 +90,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias lsl='ls -l'
+alias lsl='ls -hl'
 alias dir='ls -lF'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -109,7 +109,6 @@ fi
 # add some path
 export PATH=$PATH:/usr/local/texlive/2022/bin/x86_64-linux
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/opt/rocm-6.1.1/bin
 export LD_LIBRARY_PATH=/usr/local/gmp/lib:$LD_LIBRARY_PATH
 export BXSHARE=/home/crosscap/bochs/share/bochs
 export WORKING=/home/crosscap/code/mycode/cs61a

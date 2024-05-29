@@ -22,9 +22,9 @@ Each file will be classified by the software using it.
 
 #### git
 
-.gitconfig
-.gitignore
-my-gitignore.txt
+- .gitconfig
+- .gitignore
+- my-gitignore.txt
 
 #### vim
 
