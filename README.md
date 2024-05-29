@@ -2,9 +2,17 @@
 
 ## crosscap's dotfile
 
+Use (Dotbot)[https://github.com/anishathalye/dotbot] to control these files.
+
+### How to use
+
+Run ./install
+
+### dotfile list
+
 Each file will be classified by the software using it.
 
-### bash
+#### bash
 
 - .bash_aliases
 - .bash_logout
@@ -12,35 +20,35 @@ Each file will be classified by the software using it.
 - .bashrc.backup
 - .prefile
 
-### git
+#### git
 
 .gitconfig
 .gitignore
 my-gitignore.txt
 
-### vim
+#### vim
 
 - .vimrc
 
-### emacs
+#### emacs
 
 - .emacs.d/init.el
 
-### conda
+#### conda
 
 .condarc
 
-### scheme
+#### scheme
 
 .scheme.init
 
-### C & C++ formatting
+#### C & C++ formatting
 
 Cformat.txt
 
-### some instelled script
+#### some instelled script
 
-#### docker
+##### docker
 
 ```shell
 sudo apt install bash-completion
@@ -57,7 +65,7 @@ mkdir -p ~/.local/share/bash-completion/completions
 docker completion bash > ~/.local/share/bash-completion/completions/docker
 ```
 
-#### rustup
+##### rustup
 
 ```shell
 rustup completions bash > ~/.local/share/bash-completion/completions/rustup
