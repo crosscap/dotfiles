@@ -12,15 +12,19 @@ Each file will be classified by the software using it.
 - .bashrc.backup
 - .prefile
 
-### vim
-
-- .vimrc
-
 ### git
 
 .gitconfig
 .gitignore
 my-gitignore.txt
+
+### vim
+
+- .vimrc
+
+### emacs
+
+- .emacs.d/init.el
 
 ### conda
 
@@ -30,10 +34,31 @@ my-gitignore.txt
 
 .scheme.init
 
-### docker
-
-docker.txt
-
 ### C & C++ formatting
 
 Cformat.txt
+
+### some instelled script
+
+#### docker
+
+```shell
+sudo apt install bash-completion
+# add follow script to .bashrc
+
+cat <<EOT >> ~/.bashrc
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+EOT
+
+source ~/.bashrc
+mkdir -p ~/.local/share/bash-completion/completions
+docker completion bash > ~/.local/share/bash-completion/completions/docker
+```
+
+#### rustup
+
+```shell
+rustup completions bash > ~/.local/share/bash-completion/completions/rustup
+```
