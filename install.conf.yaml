@@ -10,6 +10,7 @@
     ~/.bashrc:
     ~/.bash_aliases:
     ~/.bash_logout:
+    ~/.bash-git-prompt:
     ~/.profile:
     ~/.gitconfig:
     ~/.condarc:
