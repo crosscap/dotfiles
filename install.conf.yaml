@@ -12,6 +12,7 @@
     ~/.bash_logout:
     ~/.bash-git-prompt:
     ~/.profile:
+    ~/.zshrc:
     ~/.gitconfig:
     ~/.condarc:
     ~/.scheme.init:

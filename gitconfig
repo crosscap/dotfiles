@@ -3,3 +3,5 @@
 	name = crosscap
 [init]
 	defaultBranch = master
+[core]
+	pager = 
