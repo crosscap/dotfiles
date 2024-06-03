@@ -2,7 +2,7 @@
 
 ## crosscap's dotfile
 
-Use (Dotbot)[https://github.com/anishathalye/dotbot] to control these files.
+Use [Dotbot](https://github.com/anishathalye/dotbot) to control these files.
 
 ### How to use
 
