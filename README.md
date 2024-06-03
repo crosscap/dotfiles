@@ -78,3 +78,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs     https://raw.githubuserconte
 ```shell
 rustup completions bash > ~/.local/share/bash-completion/completions/rustup
 ```
+
+#### some apt package
+
+```shell
+source-highlight
+```
