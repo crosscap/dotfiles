@@ -2,7 +2,7 @@
 
 ## crosscap's dotfile
 
-Use (Dotbot)[https://github.com/anishathalye/dotbot] to control these files.
+Use [Dotbot](https://github.com/anishathalye/dotbot) to control these files.
 
 ### How to use
 
@@ -23,7 +23,7 @@ Each file will be classified by the software using it.
 #### git
 
 - .gitconfig
-- .gitignore
+- .gitignore_global
 - my-gitignore.txt
 
 #### vim
@@ -36,15 +36,15 @@ Each file will be classified by the software using it.
 
 #### conda
 
-.condarc
+- .condarc
 
 #### scheme
 
-.scheme.init
+- .scheme.init
 
 #### C & C++ formatting
 
-Cformat.txt
+- Cformat.txt
 
 #### some instelled script
 
@@ -65,8 +65,22 @@ mkdir -p ~/.local/share/bash-completion/completions
 docker completion bash > ~/.local/share/bash-completion/completions/docker
 ```
 
+##### vim
+
+Install plug.vim
+
+```shell
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
 ##### rustup
 
 ```shell
 rustup completions bash > ~/.local/share/bash-completion/completions/rustup
+```
+
+#### some apt package
+
+```shell
+source-highlight
 ```

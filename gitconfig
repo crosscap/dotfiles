@@ -3,5 +3,9 @@
 	name = crosscap
 [init]
 	defaultBranch = master
+[alias]
+	graph = log --all --graph --decorate --oneline
 [core]
-	pager = 
+	excludesfile = /home/crosscap/.gitignore_global
+[pager]
+	branch = false
