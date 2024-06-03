@@ -23,7 +23,7 @@ Each file will be classified by the software using it.
 #### git
 
 - .gitconfig
-- .gitignore
+- .gitignore_global
 - my-gitignore.txt
 
 #### vim
@@ -36,15 +36,15 @@ Each file will be classified by the software using it.
 
 #### conda
 
-.condarc
+- .condarc
 
 #### scheme
 
-.scheme.init
+- .scheme.init
 
 #### C & C++ formatting
 
-Cformat.txt
+- Cformat.txt
 
 #### some instelled script
 

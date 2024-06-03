@@ -13,6 +13,7 @@
     ~/.bash-git-prompt:
     ~/.profile:
     ~/.gitconfig:
+    ~/.gitignore_global:
     ~/.condarc:
     ~/.scheme.init:
     ~/.emacs.d:
