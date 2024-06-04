@@ -117,6 +117,9 @@ export WINNEWDOWN=$WINHOME/Downloads/new/
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=" -R "
 
+# add some software's path
+. "$HOME/.cargo/env"
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -204,4 +207,3 @@ if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     source "$HOME/.bash-git-prompt/gitprompt.sh"
 fi
 # <<< git prompt <<<
-. "$HOME/.cargo/env"
