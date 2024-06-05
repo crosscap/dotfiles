@@ -70,7 +70,7 @@ docker completion bash > ~/.local/share/bash-completion/completions/docker
 Install plug.vim
 
 ```shell
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 ##### rustup
