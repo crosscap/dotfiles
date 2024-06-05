@@ -3,6 +3,8 @@ alias vi='vim'
 alias vimtutor='vimtutor zh_CN'
 alias mit='mit-scheme'
 alias more='less'
+alias wirte-good='npx write-good'
+alias start='xdg-open'
 
 # some personal aliases
 alias fd='fdfind'

@@ -107,8 +107,10 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # add some path
-export PATH=$PATH:/usr/local/texlive/2022/bin/x86_64-linux
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/texlive/2024/bin/x86_64-linux
+export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
 export LD_LIBRARY_PATH=/usr/local/gmp/lib:$LD_LIBRARY_PATH
 export BXSHARE=/home/crosscap/bochs/share/bochs
 export WORKING=/home/crosscap/code/mycode/cs61a
