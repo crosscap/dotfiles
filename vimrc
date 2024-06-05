@@ -156,4 +156,5 @@ call plug#begin()
 Plug 'preservim/NERDTree'
 Plug 'wikitopian/hardmode'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
