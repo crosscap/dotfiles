@@ -57,7 +57,8 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[0;32m\]\[\033[0;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \n\[\033[0;37m\]$(date +%H:%M)\[\033[0;0m\] $ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -106,12 +107,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# add some path
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/usr/local/texlive/2024/bin/x86_64-linux
-export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
-export LD_LIBRARY_PATH=/usr/local/gmp/lib:$LD_LIBRARY_PATH
+# chenge some environment
 export BXSHARE=/home/crosscap/bochs/share/bochs
 export WORKING=/home/crosscap/code/mycode/cs61a
 export WINHOME=/mnt/c/Users/wangl
@@ -119,7 +115,12 @@ export WINNEWDOWN=$WINHOME/Downloads/new/
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=" -R "
 
-# add some software's path
+# add some software's environment 
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/texlive/2024/bin/x86_64-linux
+export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
+export LD_LIBRARY_PATH=/usr/local/gmp/lib:$LD_LIBRARY_PATH
 . "$HOME/.cargo/env"
 
 # enable programmable completion features (you don't need to enable
