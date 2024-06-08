@@ -17,7 +17,7 @@
     ~/.gitignore_global:
     ~/.condarc:
     ~/.scheme.init:
-    ~/.emacs.d:
+    ~/.emacs.d/init.el: emacs.d/init.el
 
 - create:
     - ~/Downloads
