@@ -7,5 +7,6 @@
 	graph = log --all --graph --decorate --oneline
 [core]
 	excludesfile = /home/crosscap/.gitignore_global
+	editor = vim
 [pager]
 	branch = false

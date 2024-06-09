@@ -5,19 +5,20 @@
 - clean: ['~']
 
 - link:
-    ~/.tmux.conf:
     ~/.vimrc:
+    ~/.emacs.d/init.el: emacs.d/init.el
     ~/.bashrc:
     ~/.bash_aliases:
     ~/.bash_logout:
     ~/.bash-git-prompt:
     ~/.profile:
     ~/.zshrc:
+    ~/.tmux.conf:
     ~/.gitconfig:
     ~/.gitignore_global:
     ~/.condarc:
     ~/.scheme.init:
-    ~/.emacs.d/init.el: emacs.d/init.el
+    ~/.cargo/config.toml: cargo/config.toml
 
 - create:
     - ~/Downloads
