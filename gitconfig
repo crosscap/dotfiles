@@ -12,3 +12,5 @@
 	branch = false
 [diff]
 	tool = vimdiff
+[color]
+	ui = auto
