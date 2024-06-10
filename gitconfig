@@ -5,6 +5,10 @@
 	defaultBranch = master
 [alias]
 	graph = log --all --graph --decorate --oneline
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
 [core]
 	excludesfile = /home/crosscap/.gitignore_global
 	editor = vim
