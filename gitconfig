@@ -10,3 +10,7 @@
 	editor = vim
 [pager]
 	branch = false
+[diff]
+	tool = vimdiff
+[color]
+	ui = auto
