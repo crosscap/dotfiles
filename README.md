@@ -46,7 +46,7 @@ Each file will be classified by the software using it.
 
 - Cformat.txt
 
-#### some instelled script
+#### some installed scripts
 
 ##### docker
 
@@ -79,7 +79,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 rustup completions bash > ~/.local/share/bash-completion/completions/rustup
 ```
 
-#### some apt package
+#### some apt packages
 
 ```shell
 source-highlight
