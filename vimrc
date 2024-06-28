@@ -157,4 +157,5 @@ Plug 'preservim/NERDTree'
 Plug 'wikitopian/hardmode'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-commentary'
 call plug#end()
