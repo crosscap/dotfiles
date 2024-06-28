@@ -107,22 +107,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# chenge some environment
-export BXSHARE=/home/crosscap/bochs/share/bochs
-export WORKING=/home/crosscap/code/mycode/cs61a
-export WINHOME=/mnt/c/Users/wangl
-export WINNEWDOWN=$WINHOME/Downloads/new/
-export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
-export LESS=" -R "
-
-# add some software's environment 
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/usr/local/texlive/2024/bin/x86_64-linux
-export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
-export LD_LIBRARY_PATH=/usr/local/gmp/lib:$LD_LIBRARY_PATH
-. "$HOME/.cargo/env"
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).

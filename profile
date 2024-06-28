@@ -26,4 +26,23 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# add some new PATH
+PATH=$PATH:/usr/local/go/bin
+PATH=$PATH:/usr/local/texlive/2024/bin/x86_64-linux
+
+export PATH
+
+# add some software's environment 
+export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
+export LD_LIBRARY_PATH=/usr/local/gmp/lib:$LD_LIBRARY_PATH
+
+# chenge some environment
+export BXSHARE=/home/crosscap/bochs/share/bochs
+export WORKING=/home/crosscap/code/mycode/cs61a
+export WINHOME=/mnt/c/Users/wangl
+export WINNEWDOWN=$WINHOME/Downloads/new/
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+export LESS=" -R "
+
 . "$HOME/.cargo/env"
