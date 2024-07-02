@@ -51,20 +51,6 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
-" missing semester's vimrc
-" Comments in Vimscript start with a `"`.
-
-" If you open this file in Vim, it'll be syntax highlighted for you.
-
-" Vim is based on Vi. Setting `nocompatible` switches from the default
-" Vi-compatibility mode and enables useful Vim functionality. This
-" configuration option turns out not to be necessary for the file named
-" '~/.vimrc', because Vim automatically enters nocompatible mode if that file
-" is present. But we're including it here just in case this config file is
-" loaded some other way (e.g. saved as `foo`, and then Vim started with
-" `vim -u foo`).
-set nocompatible
-
 " Turn on syntax highlighting.
 syntax on
 
@@ -82,7 +68,8 @@ set number
 " down.
 set relativenumber
 
-" Always show the status line at the bottom, even if you only have one window open.
+" Always show the status line at the bottom, 
+" even if you only have one window open.
 set laststatus=2
 
 " The backspace key has slightly unintuitive behavior by default. For example,
@@ -140,10 +127,15 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 augroup END
 
+" set an 80-character boundary
 set ruler
 set colorcolumn=81
+
+" always show what mode the vim in
 set showmode
-map <F3> :tabnew .<CR> " show current directory in new tab
+
+" show current directory in new tab
+map <F3> :tabnew .<CR> 
 
 " some backup settings
 " set nobackup       " no backup files
@@ -152,6 +144,7 @@ map <F3> :tabnew .<CR> " show current directory in new tab
 " set noundofile     " no undo files
 set backupskip=/home/crosscap/code/mycode/cs61a/*
 
+" use vim.plug to manage plugs
 call plug#begin()
 Plug 'preservim/NERDTree'
 Plug 'wikitopian/hardmode'
