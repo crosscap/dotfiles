@@ -21,3 +21,5 @@
 	tool = vimdiff
 [color]
 	ui = auto
+[proxy]
+	https = socks5://192.168.144.1:10808
