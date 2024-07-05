@@ -137,6 +137,9 @@ set showmode
 " show current directory in new tab
 map <F3> :tabnew .<CR> 
 
+" use bash mode when need tab complete
+set wildmode=longest,list
+
 " some backup settings
 " set nobackup       " no backup files
 " set noswapfile     " no swap files
