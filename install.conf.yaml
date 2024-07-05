@@ -7,6 +7,7 @@
 - link:
     ~/.vimrc:
     ~/.emacs.d/init.el: emacs.d/init.el
+    ~/.emacs.d/early-init.el: emacs.d/early-init.el
     ~/.bashrc:
     ~/.bash_aliases:
     ~/.bash_logout:
