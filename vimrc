@@ -147,6 +147,10 @@ set wildmode=longest,list
 " set noundofile     " no undo files
 set backupskip=/home/crosscap/code/mycode/cs61a/*
 
+" make command mode history trace back more easily
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
 " use vim.plug to manage plugs
 call plug#begin()
 Plug 'preservim/NERDTree'
