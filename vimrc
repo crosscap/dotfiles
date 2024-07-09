@@ -158,4 +158,5 @@ Plug 'wikitopian/hardmode'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-unimpaired'
 call plug#end()
