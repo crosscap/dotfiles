@@ -131,6 +131,12 @@ augroup END
 set ruler
 set colorcolumn=81
 
+" chenge tab's default length
+set tabstop=4
+
+" set audoindent
+set autoindent
+
 " always show what mode the vim in
 set showmode
 
