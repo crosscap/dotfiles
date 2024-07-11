@@ -157,6 +157,9 @@ set backupskip=/home/crosscap/code/mycode/cs61a/*
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
+" make working dictionary complete more easily
+cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%'
+
 " use vim.plug to manage plugs
 call plug#begin()
 Plug 'preservim/NERDTree'
