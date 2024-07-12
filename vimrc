@@ -146,6 +146,10 @@ map <F3> :tabnew .<CR>
 " use bash mode when need tab complete
 set wildmode=longest,list
 
+" show tab and tail space
+set list
+set listchars=tab:>-,trail:-
+
 " some backup settings
 " set nobackup       " no backup files
 " set noswapfile     " no swap files
