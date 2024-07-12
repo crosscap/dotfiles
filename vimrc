@@ -160,6 +160,10 @@ cnoremap <C-n> <Down>
 " make working dictionary complete more easily
 cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%'
 
+" enable netrw plug
+set nocompatible
+filetype plugin on
+
 " use vim.plug to manage plugs
 call plug#begin()
 Plug 'preservim/NERDTree'
