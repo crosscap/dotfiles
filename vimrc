@@ -132,7 +132,7 @@ set ruler
 set colorcolumn=81
 
 " chenge tab's default length
-set tabstop=4
+set tabstop=8
 
 " set audoindent
 set autoindent
