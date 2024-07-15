@@ -164,6 +164,10 @@ cnoremap <C-n> <Down>
 " make working dictionary complete more easily
 cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%'
 
+" Set a variable on the buffer that tells the sh syntax highlighter
+" that this is bash:
+let g:is_bash = 1
+
 " enable netrw plug
 set nocompatible
 filetype plugin on
