@@ -16,6 +16,11 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+# include local environment if it exists
+if [[ -f "$HOME/.local_path" ]]; then
+	. "$HOME/.local_path"
+fi
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
@@ -27,8 +32,8 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # add some new PATH
-PATH=$PATH:/usr/local/go/bin
-PATH=$PATH:/usr/local/texlive/2024/bin/x86_64-linux
+PATH=/usr/local/go/bin:$PATH
+PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
 
 export PATH
 
@@ -39,7 +44,6 @@ export LD_LIBRARY_PATH=/usr/local/gmp/lib:$LD_LIBRARY_PATH
 
 # chenge some environment
 export BXSHARE=/home/crosscap/bochs/share/bochs
-export WORKING=/home/crosscap/code/mycode/cs61a
 export WINHOME=/mnt/c/Users/wangl
 export WINNEWDOWN=$WINHOME/Downloads/new/
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
