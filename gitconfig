@@ -21,3 +21,6 @@
 	tool = vimdiff
 [color]
 	ui = auto
+[pull]
+	rebase = false
+	ff = only
