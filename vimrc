@@ -172,6 +172,9 @@ let g:is_bash = 1
 set nocompatible
 filetype plugin on
 
+" enable matchit.vim
+runtime macros/matchit.vim
+
 " use vim.plug to manage plugs
 call plug#begin()
 Plug 'preservim/NERDTree'
