@@ -6,6 +6,7 @@
 
 - link:
     ~/.vimrc:
+    ~/.emacs:
     ~/.emacs.d/init.el: emacs.d/init.el
     ~/.emacs.d/early-init.el: emacs.d/early-init.el
     ~/.bashrc:
