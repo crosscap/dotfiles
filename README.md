@@ -14,8 +14,8 @@ Each file will be classified by the software using it.
 
 #### bash
 
-- .bash_aliases
-- .bash_logout
+- .bash\_aliases
+- .bash\_logout
 - .bashrc
 - .bashrc.backup
 - .prefile
@@ -23,7 +23,7 @@ Each file will be classified by the software using it.
 #### git
 
 - .gitconfig
-- .gitignore_global
+- .gitignore\_global
 - my-gitignore.txt
 
 #### vim
@@ -32,6 +32,7 @@ Each file will be classified by the software using it.
 
 #### emacs
 
+- .emacs
 - .emacs.d/init.el
 
 #### conda
@@ -60,6 +61,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 EOT
 
+# run following sentences
 source ~/.bashrc
 mkdir -p ~/.local/share/bash-completion/completions
 docker completion bash > ~/.local/share/bash-completion/completions/docker
