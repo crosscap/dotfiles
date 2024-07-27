@@ -54,6 +54,12 @@ endif
 " Turn on syntax highlighting.
 syntax on
 
+" Detect file types based on file names to enable intelligent automatic
+" indentation and other operations
+filetype indent plugin on
+
+" Better command line completion
+set wildmenu
 " Disable the default Vim startup message.
 set shortmess+=I
 
@@ -134,6 +140,9 @@ set colorcolumn=81
 " chenge tab's default length
 set tabstop=8
 
+" enable smart tab and space trance
+set smarttab
+
 " set audoindent
 set autoindent
 
@@ -184,4 +193,5 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
+Plug 'bronson/vim-trailing-whitespace'
 call plug#end()
