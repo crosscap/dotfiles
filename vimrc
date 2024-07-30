@@ -194,4 +194,9 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'tomasiser/vim-code-dark'
 call plug#end()
+
+" enable vscode theme
+colorscheme codedark
+
