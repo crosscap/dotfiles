@@ -100,6 +100,12 @@ set smartcase
 " Enable searching as you type, rather than waiting till you press enter.
 set incsearch
 
+" Set some behaviour of auto complete
+set infercase
+
+" Enable spell check
+set spell
+
 " Unbind some useless/annoying default key bindings.
 nmap Q <Nop> " 'Q' in normal mode enters Ex mode. You almost never want this.
 
