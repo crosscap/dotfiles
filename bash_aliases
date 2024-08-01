@@ -39,5 +39,27 @@ alias glog='git log --graph --all --decorate'
 alias glogs='git log --stat'
 alias gist='gitstart'
 alias gifi='gitfinish'
-alias gitstart='git checkout master && git pull && git checkout doing && git merge master'
-alias gitfinish='git checkout master && git merge doing && git push && git checkout doing'
+
+gitstart () {
+  git checkout master
+  if git pull; then
+    git checkout doing
+    git merge master
+  else
+    echo "Error: Could not pull from master"
+  fi
+}
+
+gitfinish () {
+  git checkout master
+  git fetch
+  LOCAL=$(git rev-parse @)
+  REMOTE=$(git rev-parse "@{u}")
+  if [[ "$LOCAL" = "$REMOTE" ]]; then
+    git merge doing
+    git push
+    git checkout doing
+  else
+    echo "Have updates in remote, please deal with it first"
+  fi
+}
