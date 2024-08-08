@@ -176,6 +176,9 @@ set backupskip=/home/crosscap/code/mycode/cs61a/*
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
+" Create a shortcut to turn off the highlighting feature
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
 " make working dictionary complete more easily
 cnoremap <expr> %% getcmdtype( ) == ':' ? expand('%:h').'/' : '%%'
 
@@ -205,4 +208,3 @@ call plug#end()
 
 " enable vscode theme
 colorscheme codedark
-
