@@ -204,6 +204,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'tomasiser/vim-code-dark'
+Plug 'kana/vim-textobj-lastpat'
 call plug#end()
 
 " enable vscode theme
