@@ -193,6 +193,17 @@ filetype plugin on
 " enable matchit.vim
 runtime macros/matchit.vim
 
+" Enable visual star search function
+xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
+xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
+
+function! s:VSetSearch()
+	let temp = @s
+	norm! gv"sy
+	let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
+	let @s = temp
+endfunction
+
 " use vim.plug to manage plugs
 call plug#begin()
 Plug 'preservim/NERDTree'
