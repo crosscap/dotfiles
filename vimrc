@@ -210,13 +210,14 @@ Plug 'preservim/NERDTree'
 Plug 'wikitopian/hardmode'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-surround'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'tomasiser/vim-code-dark'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-lastpat'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
 call plug#end()
 
 " enable vscode theme
