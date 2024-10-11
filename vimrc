@@ -231,7 +231,7 @@ let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowTo
 " rainbow toggle settings
 let g:rainbow_conf = {
 \	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-\	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+\	'ctermfgs': ['lightyellow', 'lightcyan', 'blue'],
 \	'operators': '_,_',
 \	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
 \	'separately': {
