@@ -8,7 +8,7 @@
 	co = checkout
 	br = branch
 	ci = commit
-	st = status
+	st = status -s
 	last = log -1 HEAD
 	unstage = reset HEAD --
 [core]
@@ -23,4 +23,3 @@
 	ui = auto
 [pull]
 	rebase = false
-	ff = only
