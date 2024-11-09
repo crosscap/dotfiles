@@ -32,9 +32,9 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # add some new PATH
-PATH=/usr/local/go/bin:$PATH
-PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
-
+PATH="/usr/local/go/bin:$PATH"
+PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"
+PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH
 
 # add some software's environment 
