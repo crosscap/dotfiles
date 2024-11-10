@@ -12,13 +12,13 @@
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
+	source "$HOME/.bashrc"
     fi
 fi
 
 # include local environment if it exists
 if [[ -f "$HOME/.local_path" ]]; then
-	. "$HOME/.local_path"
+	source "$HOME/.local_path"
 fi
 
 # set PATH so it includes user's private bin if it exists
@@ -37,7 +37,7 @@ PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"
 PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH
 
-# add some software's environment 
+# add some software's environment
 export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
 export LD_LIBRARY_PATH=/usr/local/gmp/lib:$LD_LIBRARY_PATH
@@ -49,4 +49,4 @@ export WINNEWDOWN=$WINHOME/Downloads/new/
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=" -R "
 
-. "$HOME/.cargo/env"
+source "$HOME/.cargo/env"
