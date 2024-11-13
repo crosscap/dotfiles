@@ -42,7 +42,7 @@ export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH
 export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
 export LD_LIBRARY_PATH=/usr/local/gmp/lib:$LD_LIBRARY_PATH
 
-# chenge some environment
+# change some environment
 export BXSHARE=/home/crosscap/bochs/share/bochs
 export WINHOME=/mnt/c/Users/wangl
 export WINNEWDOWN=$WINHOME/Downloads/new/

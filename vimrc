@@ -143,7 +143,7 @@ augroup END
 set ruler
 set colorcolumn=81
 
-" chenge tab's default length
+" change tab's default length
 set tabstop=8
 
 " enable smart tab and space trance
