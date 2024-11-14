@@ -23,6 +23,7 @@ alias sbochs='sudo ~/bochs/bin/bochs'
 alias emacsnw='emacs -nw'
 alias py3doctest='python3 -m doctest'
 alias ok='python3 ok --local'
+alias neov='nvim'
 
 # some personal cd aliases
 alias cdw='cd $WORKING'
