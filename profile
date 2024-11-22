@@ -13,25 +13,25 @@ export EDITOR='vim'
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	source "$HOME/.bashrc"
-    fi
+  # include .bashrc if it exists
+  if [ -f "$HOME/.bashrc" ]; then
+    source "$HOME/.bashrc"
+  fi
 fi
 
 # include local environment if it exists
 if [[ -f "$HOME/.local_path" ]]; then
-	source "$HOME/.local_path"
+  source "$HOME/.local_path"
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+if [ -d "$HOME/bin" ]; then
+  PATH="$HOME/bin:$PATH"
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+if [ -d "$HOME/.local/bin" ]; then
+  PATH="$HOME/.local/bin:$PATH"
 fi
 
 # add some new PATH
@@ -52,4 +52,4 @@ export WINNEWDOWN=$WINHOME/Downloads/new/
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=" -R "
 
-source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
