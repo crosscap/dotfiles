@@ -83,10 +83,12 @@ rustup completions bash > ~/.local/share/bash-completion/completions/rustup
 
 #### some apt packages
 
-```shell
-source-highlight
-zsh
-power10k
-neovim
-lazyvim
-```
+- source-highlight
+- zsh
+
+#### some git clone installation
+
+- powerlevel10k
+- lazyvim
+- zsh-syntax-highlighting
+- zsh-autosuggestions
