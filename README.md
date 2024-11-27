@@ -85,4 +85,8 @@ rustup completions bash > ~/.local/share/bash-completion/completions/rustup
 
 ```shell
 source-highlight
+zsh
+power10k
+neovim
+lazyvim
 ```

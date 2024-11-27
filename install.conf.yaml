@@ -21,6 +21,7 @@
     ~/.condarc:
     ~/.scheme.init:
     ~/.cargo/config.toml: cargo/config.toml
+    ~/.p10k.zsh:
 
 - create:
     - ~/Downloads
