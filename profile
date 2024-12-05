@@ -35,14 +35,14 @@ if [ -d "$HOME/.local/bin" ]; then
 fi
 
 # add some new PATH
+# PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"
 PATH="/usr/local/go/bin:$PATH"
-PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"
 PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH
 
 # add some software's environment
-export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
+# export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH
+# export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
 export LD_LIBRARY_PATH=/usr/local/gmp/lib:$LD_LIBRARY_PATH
 
 # change some environment
