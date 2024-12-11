@@ -49,7 +49,11 @@ export LD_LIBRARY_PATH=/usr/local/gmp/lib:$LD_LIBRARY_PATH
 export BXSHARE=/home/crosscap/bochs/share/bochs
 export WINHOME=/mnt/c/Users/wangl
 export WINNEWDOWN=$WINHOME/Downloads/new/
-export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+if [[ -f "/usr/share/source-highlight/src-hilite-lesspipe.sh"]]; then
+	export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+elif [[ -f "/usr/bin/src-hilite-lesspipe.sh" ]]; then
+	export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+elif
 export LESS=" -R "
 
 . "$HOME/.cargo/env"
