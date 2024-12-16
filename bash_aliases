@@ -22,7 +22,7 @@ alias lsl='ls -hl'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# chenge some software's default modle
+# change some software's default module
 alias vi='vim'
 alias vimtutor='vimtutor zh_CN'
 alias mit='mit-scheme'
@@ -42,8 +42,8 @@ alias codew='code $WORKING'
 alias workw='cd $WORKING && code .'
 alias codebashrc='code ~/.bashrc'
 alias codealiases='code ~/.bash_aliases'
-alias bochs='~/bochs/bin/bochs'
-alias sbochs='sudo ~/bochs/bin/bochs'
+alias bochs='bin/bochs -f bochsrc.disk'
+alias sbochs='sudo bochs'
 alias emacsnw='emacs -nw'
 alias py3doctest='python3 -m doctest'
 alias ok='python3 ok --local'
