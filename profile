@@ -8,6 +8,9 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+# set default pager
+# export PAGER='most'
+
 # set default editor
 export EDITOR='vim'
 
@@ -46,9 +49,6 @@ export PATH
 export LD_LIBRARY_PATH=/usr/local/gmp/lib:$LD_LIBRARY_PATH
 
 # change some environment
-export BOCHSPATH=/home/crosscap/bochs/
-export WINHOME=/mnt/c/Users/wangl
-export WINNEWDOWN=$WINHOME/Downloads/new/
 if [[ -f "/usr/share/source-highlight/src-hilite-lesspipe.sh" ]]; then
 	export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 elif [[ -f "/usr/bin/src-hilite-lesspipe.sh" ]]; then

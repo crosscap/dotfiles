@@ -1,0 +1,6 @@
+# bochs default path
+export BOCHSPATH=~/bochs/
+
+# use this for wsl
+export WINHOME=/mnt/c/Users/wangl
+export WINNEWDOWN=$WINHOME/Downloads/new/
