@@ -9,6 +9,7 @@
 main
 tempCodeRunnerFile.*
 **/__pycache__/
+**/temp.*
 
 # >>> Linux git ignore >>>
 *~
