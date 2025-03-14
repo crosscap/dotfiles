@@ -30,7 +30,15 @@ alias more='less'
 alias wirte-good='npx write-good'
 alias start='xdg-open'
 
+# some history aliases
+alias h='histroy'
+alias r='fc -s'
+
+# del alias
+alias del='!!:s/ls/rm/'
+
 # some personal aliases
+alias a='alias'
 alias fd='fdfind'
 alias cls='clear'
 alias aptupdl='sudo apt update && echo "执行 apt list --upgradable" && apt list --upgradable'
