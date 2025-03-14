@@ -4,6 +4,12 @@
 
 - clean: ["~"]
 
+- create:
+    - ~/Downloads
+    - ~/.vim/undo-history
+    - ~/.emacs.d
+    - ~/.cargo
+
 - link:
     ~/.vimrc:
     ~/.emacs:
@@ -22,10 +28,6 @@
     ~/.scheme.init:
     ~/.cargo/config.toml: cargo/config.toml
     ~/.p10k.zsh:
-
-- create:
-    - ~/Downloads
-    - ~/.vim/undo-history
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
