@@ -95,6 +95,7 @@ if ! shopt -oq posix; then
 fi
 
 # set -o vi
+set -o emacs
 
 # Set colors for man pages
 function man() {

@@ -34,33 +34,35 @@ alias start='xdg-open'
 alias h='histroy'
 alias r='fc -s'
 
-# del alias
+# del alias for bash, cshell and zsh
 alias del='!!:s/ls/rm/'
+
+# some personal remove aliases
+alias rmexe='find . -name "*.exe" -type f -delete'
+alias rmout='find . -name "*.out" -type f -delete'
+alias rmedbak='find . -name "*~" -type f -delete && find . -name ".*.swp" -type f -delete'
+alias rmzoneinent='find . -name "*:Zone.Identifier" -type f -delete'
 
 # some personal aliases
 alias a='alias'
 alias fd='fdfind'
 alias cls='clear'
 alias aptupdl='sudo apt update && echo "执行 apt list --upgradable" && apt list --upgradable'
-alias rmexe='find . -name "*.exe" -type f -delete'
-alias rmout='find . -name "*.out" -type f -delete'
-alias rmedbak='find . -name "*~" -type f -delete && find . -name ".*.swp" -type f -delete'
-alias rmzoneinent='find . -name "*:Zone.Identifier" -type f -delete'
-alias codew='code $WORKING'
-alias workw='cd $WORKING && code .'
-alias codebashrc='code ~/.bashrc'
-alias codealiases='code ~/.bash_aliases'
-alias bochs='bin/bochs -f bochsrc.disk'
-alias sbochs='sudo bochs'
 alias emacsnw='emacs -nw'
 alias py3doctest='python3 -m doctest'
 alias ok='python3 ok --local'
 alias neov='nvim'
 
-# some personal cd aliases
+# some personal cd and code aliases
 alias cdw='cd $WORKING'
 alias cdmycode='cd ~/code/mycode/'
 alias cdccode='cd /mnt/c/Users/wangl/code'
+alias codew='code $WORKING'
+alias workw='cd $WORKING && code .'
+
+# some personal bochs alias
+alias bochs='bin/bochs -f bochsrc.disk'
+alias sbochs='sudo bochs'
 
 # some personal git aliases
 alias gs='git status'
