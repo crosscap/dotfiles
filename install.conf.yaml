@@ -22,6 +22,8 @@
     ~/.bash-git-prompt:
     ~/.profile:
     ~/.zshrc:
+    ~/.tcshrc:
+    ~/.login:
     ~/.tmux.conf:
     ~/.gitconfig:
     ~/.gitignore_global:

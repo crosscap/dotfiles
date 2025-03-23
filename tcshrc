@@ -1,0 +1,21 @@
+# =====================================
+# tcshrc
+# =====================================
+
+# Shell variables
+set filec
+set path = (${path} ${HOME}/bin)
+set savehist = 1000
+set history = 1000
+
+# Shell prompt
+set prompt = "%n@%m:%~ > "
+set rprompt = "(%T)"
+
+# Aliases
+alias a alias
+alias del 'rm \!ls:*'
+alias h history
+alias la 'ls -a'
+alias ll 'ls -l'
+alias lla 'ls -la'
