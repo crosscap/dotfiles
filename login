@@ -10,4 +10,4 @@ setenv EDITOR "vim"
 bindkey -e
 
 # File creation mask
-umask 077
+# umask 077
