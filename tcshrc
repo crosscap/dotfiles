@@ -12,10 +12,18 @@ set history = 1000
 set prompt = "%n@%m:%~ > "
 set rprompt = "(%T)"
 
-# Aliases
+# Aliases of commands
 alias a alias
-alias del 'rm \!ls:*'
+alias folddef 'fold -s -w 80'
+
+# Aliases of history
 alias h history
+
+# Aliases of delete
+# alias del 'rm \!ls:*'
+alias del '!!:s/ls/rm/'
+
+# Aliases of ls
 alias la 'ls -a'
 alias ll 'ls -l'
 alias lla 'ls -la'
