@@ -4,12 +4,13 @@
 [init]
 	defaultBranch = master
 [alias]
-	graph = log --all --graph --decorate --oneline
 	co = checkout
 	br = branch
 	ci = commit
 	st = status -s
 	last = log -1 HEAD
+	graph = log --all --graph --decorate --oneline
+	recommit = commit --amend --no-edit
 	unstage = reset HEAD --
 [core]
 	excludesfile = /home/crosscap/.gitignore_global
