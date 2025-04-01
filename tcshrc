@@ -27,3 +27,6 @@ alias del '!!:s/ls/rm/'
 alias la 'ls -a'
 alias ll 'ls -l'
 alias lla 'ls -la'
+
+# Use extended grep
+alias grep 'grep -E'
