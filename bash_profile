@@ -50,4 +50,7 @@ elif [[ -f "/usr/bin/src-hilite-lesspipe.sh" ]]; then
 fi
 export LESS=" -R "
 
+# set LC_COLLATE to C for sorting
+export LC_COLLATE=C
+
 [[ -f ~/.bashrc ]] && . ~/.bashrc
