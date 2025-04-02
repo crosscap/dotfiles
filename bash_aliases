@@ -26,6 +26,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # change some software's default module
 alias vi='vim'
+alias view='vim -R'
 alias vimtutor='vimtutor zh_CN'
 alias mit='mit-scheme'
 alias more='less'
