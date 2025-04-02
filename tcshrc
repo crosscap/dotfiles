@@ -20,8 +20,7 @@ alias folddef 'fold -s -w 80'
 alias h history
 
 # Aliases of delete
-# alias del 'rm \!ls:*'
-alias del '!!:s/ls/rm/'
+alias del 'rm \!ls:*'
 
 # Aliases of ls
 alias la 'ls -a'

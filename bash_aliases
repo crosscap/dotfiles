@@ -37,8 +37,7 @@ alias h='histroy'
 alias r='fc -s'
 
 # del alias for bash, cshell and zsh
-# alias del='fc -s ls=rm'
-alias del='!!:s/ls/rm/'
+alias del='fc -s ls=rm'
 
 # some personal remove aliases
 alias rmexe='find . -name "*.exe" -type f -delete'
