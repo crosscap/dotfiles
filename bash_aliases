@@ -29,7 +29,6 @@ alias vi='vim'
 alias view='vim -R'
 alias vimtutor='vimtutor zh_CN'
 alias mit='mit-scheme'
-alias more='less'
 alias wirte-good='npx write-good'
 alias start='xdg-open'
 
