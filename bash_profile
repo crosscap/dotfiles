@@ -32,6 +32,9 @@ fi
 if [[ -d "/opt/nvim-linux64/bin" ]]; then
   PATH="$PATH:/opt/nvim-linux64/bin"
 fi
+if [[ -d "/home/crosscap/.duckdb" ]]; then
+  PATH='/home/crosscap/.duckdb/cli/latest':$PATH
+fi
 export PATH
 
 # add some software's environment
@@ -42,13 +45,13 @@ if [[ -f "$HOME/.local_path" ]]; then
   source "$HOME/.local_path"
 fi
 
-# change some environment
+# set less options
 if [[ -f "/usr/share/source-highlight/src-hilite-lesspipe.sh" ]]; then
 	export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 elif [[ -f "/usr/bin/src-hilite-lesspipe.sh" ]]; then
 	export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 fi
-export LESS='-CMs'
+export LESS='-CMRs'
 
 # set LC_COLLATE to C for sorting
 export LC_COLLATE=C
