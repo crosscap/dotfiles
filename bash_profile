@@ -48,7 +48,7 @@ if [[ -f "/usr/share/source-highlight/src-hilite-lesspipe.sh" ]]; then
 elif [[ -f "/usr/bin/src-hilite-lesspipe.sh" ]]; then
 	export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 fi
-export LESS=" -R "
+export LESS='-CMs'
 
 # set LC_COLLATE to C for sorting
 export LC_COLLATE=C
