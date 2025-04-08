@@ -1,15 +1,21 @@
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-  alias ls='ls --color=auto'
-  alias dir='dir --color=auto'
-  alias vdir='vdir --color=auto'
+  alias ls='ls -F --color=auto'
+  alias dir='dir -F --color=auto'
+  alias vdir='vdir -F --color=auto'
 
   # alias grep='grep --color=auto'
   # Use extended grep
   alias grep='grep -E --color=auto'
   alias fgrep='fgrep --color=auto'
   alias egrep='egrep --color=auto'
+else
+  alias ls='ls -F'
+  alias dir='dir -F'
+  alias vdir='vdir -F'
+
+  alias grep='grep -E'
 fi
 
 # some more ls aliases
@@ -17,8 +23,9 @@ fi
 alias ll='ls -lh'
 alias la='ls -A'
 alias lla='ls -Alh'
-alias l='ls -CF'
+alias l='ls -C'
 alias lsl='ls -hl'
+alias ldot='ls -d .??*'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
