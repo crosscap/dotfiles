@@ -23,7 +23,7 @@ if [ -d "$HOME/.local/bin" ]; then
 fi
 
 # Added by Toolbox App
-export PATH="$PATH:/home/crosscap/.local/share/JetBrains/Toolbox/scripts"
+export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
 
 # add some new PATH
 if [[ -d "/usr/local/go/bin" ]]; then
@@ -32,8 +32,8 @@ fi
 if [[ -d "/opt/nvim-linux64/bin" ]]; then
   PATH="$PATH:/opt/nvim-linux64/bin"
 fi
-if [[ -d "/home/crosscap/.duckdb" ]]; then
-  PATH='/home/crosscap/.duckdb/cli/latest':$PATH
+if [[ -d "$HOME/.duckdb/cli/latest" ]]; then
+  PATH="$HOME/.duckdb/cli/latest:$PATH"
 fi
 export PATH
 
@@ -47,9 +47,9 @@ fi
 
 # set less options
 if [[ -f "/usr/share/source-highlight/src-hilite-lesspipe.sh" ]]; then
-	export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+  export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 elif [[ -f "/usr/bin/src-hilite-lesspipe.sh" ]]; then
-	export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+  export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 fi
 export LESS='-CMRs'
 

@@ -38,9 +38,18 @@ if [ -d "$HOME/.local/bin" ]; then
 fi
 
 # add some new PATH
-# PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"
-PATH="/usr/local/go/bin:$PATH"
-PATH="$PATH:/opt/nvim-linux64/bin"
+if [[ -d "$HOME/.duckdb/cli/latest" ]]; then
+  PATH="$HOME/.duckdb/cli/latest:$PATH"
+fi
+if [[ -d "/usr/local/go/bin" ]]; then
+  PATH="/usr/local/go/bin:$PATH"
+fi
+if [[ -d "/usr/local/texlive/2024/bin/x86_64-linux" ]]; then
+  PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"
+fi
+if [[ -d "/opt/nvim-linux64/bin" ]]; then
+  PATH="/opt/nvim-linux64/bin:$PATH"
+fi
 export PATH
 
 # add some software's environment
@@ -54,6 +63,9 @@ if [[ -f "/usr/share/source-highlight/src-hilite-lesspipe.sh" ]]; then
 elif [[ -f "/usr/bin/src-hilite-lesspipe.sh" ]]; then
 	export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 fi
-export LESS=" -R "
+export LESS='-CMRs'
+
+# set LC_COLLATE to C for sorting
+export LC_COLLATE=C
 
 . "$HOME/.cargo/env"
