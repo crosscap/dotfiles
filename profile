@@ -8,64 +8,56 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-# set default pager
-# export PAGER='most'
-
-# set default editor
+# --- Environment Variables ---
+export PAGER='less'
 export EDITOR='vim'
+export VISUAL='vim'
 
-# if running bash
-if [ -n "$BASH_VERSION" ]; then
-  # include .bashrc if it exists
-  if [ -f "$HOME/.bashrc" ]; then
-    source "$HOME/.bashrc"
+# --- PATH Management ---
+# Define directories to prepend to PATH (order matters)
+path_dirs=(
+  "$HOME/bin"                                    # User's private bin
+  "$HOME/.local/bin"                             # User's local binaries
+  "$HOME/.local/share/JetBrains/Toolbox/scripts" # JetBrains Toolbox scripts
+  "/usr/local/go/bin"                            # Go language binaries
+  "/opt/nvim-linux64/bin"                        # Neovim installation
+  "$HOME/.cargo/bin"                             # Rust/Cargo binaries
+  "$HOME/.duckdb/cli/latest/bin"                 # DuckDB CLI
+)
+
+# Add valid directories to PATH (new entries take precedence)
+for dir in "${path_dirs[@]}"; do
+  if [[ -d "$dir" ]]; then
+    PATH="$dir:$PATH"
   fi
-fi
+done
 
-# include local environment if it exists
-if [[ -f "$HOME/.local_path" ]]; then
-  source "$HOME/.local_path"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ]; then
-  PATH="$HOME/bin:$PATH"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ]; then
-  PATH="$HOME/.local/bin:$PATH"
-fi
-
-# add some new PATH
-if [[ -d "$HOME/.duckdb/cli/latest" ]]; then
-  PATH="$HOME/.duckdb/cli/latest:$PATH"
-fi
-if [[ -d "/usr/local/go/bin" ]]; then
-  PATH="/usr/local/go/bin:$PATH"
-fi
-if [[ -d "/usr/local/texlive/2024/bin/x86_64-linux" ]]; then
-  PATH="/usr/local/texlive/2024/bin/x86_64-linux:$PATH"
-fi
-if [[ -d "/opt/nvim-linux64/bin" ]]; then
-  PATH="/opt/nvim-linux64/bin:$PATH"
-fi
+# Deduplicate PATH entries (Bash-compatible method)
+PATH=$(awk -v RS=: '!a[$0]++' <<<"$PATH" | paste -sd: -)
 export PATH
 
-# add some software's environment
-# export MANPATH=/usr/local/texlive/2024/texmf-dist/doc/man:$MANPATH
-# export INFOPATH=/usr/local/texlive/2024/texmf-dist/doc/info:$INFOPATH
-export LD_LIBRARY_PATH=/usr/local/gmp/lib:$LD_LIBRARY_PATH
-
-# change some environment
-if [[ -f "/usr/share/source-highlight/src-hilite-lesspipe.sh" ]]; then
-	export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
-elif [[ -f "/usr/bin/src-hilite-lesspipe.sh" ]]; then
-	export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+# --- Conditional LESS syntax highlighting setup ---
+# Find syntax highlighter for less
+lesspipe_sh=$(command -v src-hilite-lesspipe.sh 2>/dev/null)
+if [[ -n "$lesspipe_sh" ]]; then
+  export LESSOPEN="| $lesspipe_sh %s"
 fi
-export LESS='-CMRs'
+export LESS='-CMRs' # Set less options
 
-# set LC_COLLATE to C for sorting
-export LC_COLLATE=C
+# --- Locale Settings ---
+export LC_COLLATE=C # C-style sorting
 
-. "$HOME/.cargo/env"
+# --- Security-Sensitive Environment Variables ---
+# Only set LD_LIBRARY_PATH if explicitly needed
+if [[ -d "/usr/local/gmp/lib" ]]; then
+  export LD_LIBRARY_PATH="/usr/local/gmp/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+fi
+
+# --- Local Configuration Overrides ---
+[[ -f "$HOME/.local_path" ]] && source "$HOME/.local_path"
+
+# --- Bash-Specific Configuration ---
+# Load .bashrc for interactive Bash shells
+if [[ -n "$BASH_VERSION" && -f "$HOME/.bashrc" ]]; then
+  source "$HOME/.bashrc"
+fi
