@@ -22,7 +22,7 @@ path_dirs=(
   "/usr/local/go/bin"                            # Go language binaries
   "/opt/nvim-linux64/bin"                        # Neovim installation
   "$HOME/.cargo/bin"                             # Rust/Cargo binaries
-  "$HOME/.duckdb/cli/latest/bin"                 # DuckDB CLI
+  "$HOME/.duckdb/cli/latest"                     # DuckDB CLI
 )
 
 # Add valid directories to PATH (new entries take precedence)
