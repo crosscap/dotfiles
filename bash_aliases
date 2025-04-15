@@ -62,6 +62,8 @@ alias emacsnw='emacs -nw'
 alias py3doctest='python3 -m doctest'
 alias ok='python3 ok --local'
 alias neov='nvim'
+alias clangckeck='clang-tidy -checks="cppcoreguidelines-*"'
+alias ccgcheck='clang-tidy -checks="-*,cppcoreguidelines-*"'
 
 # some personal cd and code aliases
 alias cdw='cd $WORKING'
