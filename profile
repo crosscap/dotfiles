@@ -47,6 +47,9 @@ export LESS='-CMRs' # Set less options
 # --- Locale Settings ---
 export LC_COLLATE=C # C-style sorting
 
+# --- Disable legacy algorithm to fix error in conda
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
+
 # --- Security-Sensitive Environment Variables ---
 # Only set LD_LIBRARY_PATH if explicitly needed
 if [[ -d "/usr/local/gmp/lib" ]]; then

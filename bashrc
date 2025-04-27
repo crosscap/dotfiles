@@ -171,3 +171,9 @@ if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     source "$HOME/.bash-git-prompt/gitprompt.sh"
 fi
 # <<< git prompt <<<
+
+# >>> miniconda initialize >>>
+if [ -f /opt/miniconda3/etc/profile.d/conda.sh ]; then
+    source /opt/miniconda3/etc/profile.d/conda.sh
+fi
+# <<< miniconda initialize <<<
