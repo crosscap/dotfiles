@@ -9,9 +9,9 @@
 #umask 022
 
 # --- Environment Variables ---
-export PAGER='less'
-export EDITOR='vim'
-export VISUAL='vim'
+export PAGER='less' # For viewing files
+export EDITOR='vi -e' # For old command-line editing
+export VISUAL='vim' # For new command-line editing
 
 # --- PATH Management ---
 # Define directories to prepend to PATH (order matters)
