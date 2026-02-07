@@ -135,34 +135,46 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # >>> auto start ssh agent >>>
-env=~/.ssh/agent.env
 
-agent_load_env() { test -f "$env" && . "$env" >|/dev/null; }
-
-agent_start() {
-    (
-        umask 077
-        ssh-agent >|"$env"
-    )
-    . "$env" >|/dev/null
+# test if we're running inside WSL
+is_wsl() {
+    [[ "$(uname -r)" == *microsoft* ]] || [[ "$(uname -r)" == *WSL* ]] || [ -n "$WSL_DISTRO_NAME" ]
 }
 
-agent_load_env
+# if we're in WSL, use wsl2-ssh-agent to bridge to Windows SSH agent
+if is_wsl && command -v wsl2-ssh-agent >/dev/null 2>&1; then
+    if [ -z "$SSH_AUTH_SOCK" ] || [ ! -S "$SSH_AUTH_SOCK" ]; then
+        eval $(wsl2-ssh-agent)
+    fi
+else
+    env=~/.ssh/agent.env
+    agent_load_env() { test -f "$env" && . "$env" >|/dev/null; }
 
-# agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2=agent not running
-agent_run_state=$(
-    ssh-add -l >|/dev/null 2>&1
-    echo $?
-)
+    agent_start() {
+        (
+            umask 077
+            ssh-agent >|"$env"
+        )
+        . "$env" >|/dev/null
+    }
 
-if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
-    agent_start
-    ssh-add
-elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
-    ssh-add
+    agent_load_env
+
+    # agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2=agent not running
+    agent_run_state=$(
+        ssh-add -l >|/dev/null 2>&1
+        echo $?
+    )
+
+    if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
+        agent_start
+        ssh-add
+    elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
+        ssh-add
+    fi
+    unset env
 fi
 
-unset env
 # <<< auto start ssh agent <<<
 
 # >>> git prompt >>>
