@@ -64,3 +64,8 @@ fi
 if [[ -n "$BASH_VERSION" && -f "$HOME/.bashrc" ]]; then
   source "$HOME/.bashrc"
 fi
+
+# Hermes Agent —— 确保 ~/.local/bin 在 PATH 中
+if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi

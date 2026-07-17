@@ -131,3 +131,8 @@ function man() {
         LESS_TERMCAP_us=$(printf "\e[1;32m") \
         man "$@"
 }
+
+autoload -U +X bashcompinit && bashcompinit
+if command -v gocomplete >/dev/null 2>&1; then
+  complete -o nospace -C "$(command -v gocomplete)" go
+fi

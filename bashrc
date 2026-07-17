@@ -192,3 +192,13 @@ fi
 
 # zoxide initialization
 eval "$(zoxide init bash)"
+
+# gocomplete initialization
+if command -v gocomplete >/dev/null 2>&1; then
+    complete -C "$(command -v gocomplete)" go
+fi
+
+# Hermes Agent —— 确保 ~/.local/bin 在 PATH 中
+if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
