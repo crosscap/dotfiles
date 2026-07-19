@@ -91,6 +91,35 @@ tags
 *.vsix
 # <<< VisualStudioCode git ignore <<<
 
+# >>> AI agent git ignore >>>
+# --- OpenSpec generated files (by tool) ---
+# Claude Code: skills + commands
+.claude/skills/openspec-*/
+.claude/commands/opsx/
+
+# Codex: skills only
+.codex/skills/openspec-*/
+
+# OpenCode: skills + commands
+.opencode/skills/openspec-*/
+.opencode/commands/opsx-*.md
+
+# Kimi Code: skills only
+.kimi-code/skills/openspec-*/
+
+# GitHub Copilot: skills + prompt commands
+.github/skills/openspec-*/
+.github/prompts/opsx-*.prompt.md
+
+# NOTE: .cursorrules / .windsurfrules are project-level shared configs, not ignored here.
+# NOTE: .github/copilot-instructions.md, .github/instructions/, .github/chatmodes/
+#       are project-level shared configs, not ignored here. Use per-project .gitignore if needed.
+# NOTE: CLAUDE.md, AGENTS.md are project-level instruction files, not ignored here.
+# NOTE: Tool config dirs (.claude/, .codex/, .opencode/, .kimi-code/) may contain
+#       project-level shared configs (custom commands/skills). Only OpenSpec-generated
+#       files are ignored here. Use per-project .gitignore to ignore entire dirs.
+# <<< AI agent git ignore <<<
+
 # >>> Emacs git ignore >>>
 # -*- mode: gitignore; -*-
 *~
